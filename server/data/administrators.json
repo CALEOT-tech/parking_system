@@ -1,0 +1,11 @@
+{
+  "admins": [
+    {
+      "admin_id": "A001",
+      "username": "admin",
+      "password_hash": "$2b$10$KAZ2iubQFVrelH02Ntx6y.Lg9B16PDyvS2RLgq2uHpzc4hQbLaTKm",
+      "role": "Administrator",
+      "created_date": "2025-07-27T23:53:14.893Z"
+    }
+  ]
+}

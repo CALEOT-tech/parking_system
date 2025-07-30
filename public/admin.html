@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Vehicle Parking Management System</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Login Form (shown initially) -->
+        <div id="login-section" class="login-section">
+            <div class="login-form">
+                <h2>🛡️ Admin Login</h2>
+                <form id="admin-login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit">Sign In</button>
+                    <div id="login-error" class="error-message" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard (hidden until login) -->
+        <div id="dashboard-section" class="dashboard-section">
+            <header>
+                <h1>🚗 Vehicle Parking Management System</h1>
+                <div class="header-actions">
+                    <button id="refresh-dashboard" class="btn-secondary">🔄 Refresh Dashboard</button>
+                    <button id="logout-btn" class="logout-btn">🚪 Logout</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Spaces</h3>
+                        <div id="total-spaces-stat" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Available Spaces</h3>
+                        <div id="available-spaces-stat" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Occupied Spaces</h3>
+                        <div id="occupied-spaces-stat" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Reservations</h3>
+                        <div id="active-reservations-stat" class="stat-value">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservation Statistics -->
+            <div class="reservation-stats-section">
+                <div class="section-header">
+                    <h2>📊 Reservation Statistics</h2>
+                </div>
+                <div id="reservation-stats">
+                    <p>Loading statistics...</p>
+                </div>
+            </div>
+
+            <!-- Verification Section -->
+            <div class="verification-section">
+                <div class="section-header">
+                    <h2>🎫 Ticket Verification</h2>
+                </div>
+                <div class="verification-form">
+                    <input type="text" id="ticket-input" placeholder="Enter Ticket ID or Scan QR Code">
+                    <button id="verify-ticket-btn">🔍 Verify Ticket</button>
+                    <button id="scan-qr-btn">📱 Scan QR Code</button>
+                </div>
+                
+                <div id="ticket-details" class="ticket-details" style="display: none;">
+                    <h3>Ticket Information</h3>
+                    <div id="ticket-info-content"></div>
+                    <div class="action-buttons">
+                        <!-- Buttons will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservations Management -->
+            <div class="reservations-section">
+                <div class="section-header">
+                    <h2>📋 Reservations Management</h2>
+                    <div class="filter-controls">
+                        <select id="reservation-filter">
+                            <option value="">All Reservations</option>
+                            <option value="Reserved">Reserved Only</option>
+                            <option value="In Use">In Use Only</option>
+                            <option value="Completed">Completed Only</option>
+                            <option value="Expired">Expired Only</option>
+                        </select>
+                        <button id="refresh-reservations" class="btn-secondary">🔄 Refresh</button>
+                    </div>
+                </div>
+                <div id="reservations-list">
+                    <p>Loading reservations...</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h2>📈 Recent Activity</h2>
+                </div>
+                <div id="activity-log">
+                    <p>Loading activity log...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- public/admin.html -->
+<div id="ticket-details" class="ticket-details" style="display: none;">
+    <h3>Ticket Information</h3>
+    <div id="ticket-info-content"></div>
+    <div class="action-buttons">
+        <!-- Buttons will be added dynamically -->
+    </div>
+</div>
+
+    <!-- Delete Reservation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🗑️ Delete Reservation</h2>
+                <span class="close">&times;</span>
+            </div>
+            <p>Are you sure you want to delete reservation <strong id="delete-ticket-id"></strong>?</p>
+            <p>This will free up the parking space and permanently remove the reservation.</p>
+            <div class="form-group">
+                <label for="delete-reason">Reason for deletion:</label>
+                <textarea id="delete-reason" rows="3" placeholder="Enter reason for deletion (required)..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button id="confirm-delete-btn" class="btn-danger">🗑️ Delete Reservation</button>
+                <button onclick="closeModals()" class="btn-secondary">❌ Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expire Reservation Modal -->
+    <div id="expire-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⏰ Mark Reservation as Expired</h2>
+                <span class="close">&times;</span>
+            </div>
+            <p>Are you sure you want to mark reservation <strong id="expire-ticket-id"></strong> as expired?</p>
+            <p>This will free up the parking space and mark the reservation as expired.</p>
+            <div class="form-group">
+                <label for="expire-reason">Reason for expiration:</label>
+                <textarea id="expire-reason" rows="3" placeholder="Enter reason for marking as expired (required)..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button id="confirm-expire-btn" class="btn-warning">⏰ Mark as Expired</button>
+                <button onclick="closeModals()" class="btn-secondary">❌ Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "reservations": [
+    {
+      "reservation_id": "R1753870425652",
+      "ticket_id": "T70425650",
+      "driver_id": "12345678915",
+      "vehicle_plate": "UHJBC",
+      "vehicle_type": "Car",
+      "space_assigned": "P1",
+      "entry_time": "2025-07-30T10:18:50.155Z",
+      "exit_time": "2025-07-30T19:21:58.196Z",
+      "expiry_time": "2025-07-30T12:13:45.650Z",
+      "status": "Completed",
+      "id_card_image": "/uploads/id_cards/12345678915-1753870425639.jpeg"
+    },
+    {
+      "reservation_id": "R1753870623713",
+      "ticket_id": "T70623713",
+      "driver_id": "12345678912",
+      "vehicle_plate": "UHJBC",
+      "vehicle_type": "Truck",
+      "space_assigned": "P2",
+      "entry_time": "2025-07-30T10:17:03.713Z",
+      "exit_time": null,
+      "expiry_time": "2025-07-30T10:18:38.454Z",
+      "status": "Expired",
+      "id_card_image": "/uploads/id_cards/12345678912-1753870623708.jpeg"
+    },
+    {
+      "reservation_id": "R1753871113262",
+      "ticket_id": "T71113262",
+      "driver_id": "12345678909",
+      "vehicle_plate": "UHJBC",
+      "vehicle_type": "Motorcycle",
+      "space_assigned": "P2",
+      "entry_time": "2025-07-30T10:25:13.262Z",
+      "exit_time": null,
+      "expiry_time": "2025-07-30T19:22:27.554Z",
+      "status": "Expired",
+      "id_card_image": null
+    },
+    {
+      "reservation_id": "R1753902577809",
+      "ticket_id": "T02577809",
+      "driver_id": "12345678912",
+      "vehicle_plate": "3434R",
+      "vehicle_type": "Car",
+      "space_assigned": "P3",
+      "entry_time": "2025-07-30T19:23:11.390Z",
+      "exit_time": null,
+      "expiry_time": "2025-07-30T21:09:37.809Z",
+      "status": "In Use",
+      "id_card_image": "/uploads/id_cards/12345678912-1753902577803.jpeg"
+    }
+  ]
+}

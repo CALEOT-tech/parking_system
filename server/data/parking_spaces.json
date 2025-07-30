@@ -1,0 +1,144 @@
+{
+  "spaces": [
+    {
+      "space_id": "S001",
+      "space_number": "P1",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-30T19:21:58.197Z"
+    },
+    {
+      "space_id": "S002",
+      "space_number": "P2",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-30T19:22:27.555Z"
+    },
+    {
+      "space_id": "S003",
+      "space_number": "P3",
+      "status": "Occupied",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-30T19:09:37.810Z"
+    },
+    {
+      "space_id": "S004",
+      "space_number": "P4",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-30T19:22:12.391Z"
+    },
+    {
+      "space_id": "S005",
+      "space_number": "P5",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:49:16.576Z"
+    },
+    {
+      "space_id": "S006",
+      "space_number": "P6",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:49:28.163Z"
+    },
+    {
+      "space_id": "S007",
+      "space_number": "P7",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:49:44.655Z"
+    },
+    {
+      "space_id": "S008",
+      "space_number": "P8",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:49:55.546Z"
+    },
+    {
+      "space_id": "S009",
+      "space_number": "P9",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:50:06.965Z"
+    },
+    {
+      "space_id": "S010",
+      "space_number": "P10",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:51:49.215Z"
+    },
+    {
+      "space_id": "S011",
+      "space_number": "P11",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:51:09.819Z"
+    },
+    {
+      "space_id": "S012",
+      "space_number": "P12",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:51:28.610Z"
+    },
+    {
+      "space_id": "S013",
+      "space_number": "P13",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:50:38.590Z"
+    },
+    {
+      "space_id": "S014",
+      "space_number": "P14",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:51:38.882Z"
+    },
+    {
+      "space_id": "S015",
+      "space_number": "P15",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:50:53.513Z"
+    },
+    {
+      "space_id": "S016",
+      "space_number": "P16",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T17:50:25.783Z"
+    },
+    {
+      "space_id": "S017",
+      "space_number": "P17",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T16:38:03.292Z"
+    },
+    {
+      "space_id": "S018",
+      "space_number": "P18",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T16:21:44.584Z"
+    },
+    {
+      "space_id": "S019",
+      "space_number": "P19",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T16:38:50.314Z"
+    },
+    {
+      "space_id": "S020",
+      "space_number": "P20",
+      "status": "Available",
+      "vehicle_type": "Car",
+      "last_updated": "2025-07-28T15:57:43.255Z"
+    }
+  ]
+}

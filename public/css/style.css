@@ -1,0 +1,485 @@
+/* Modern Vehicle Parking Management System CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Parking Info Section */
+.parking-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.info-card div {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Reservation Form */
+.reservation-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.reservation-form h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Ticket Display */
+.ticket-display {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.ticket-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ticket-content h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.ticket-content img {
+    max-width: 250px;
+    height: auto;
+    border: 3px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    margin: 20px 0;
+}
+
+.instructions {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 4px solid #667eea;
+}
+
+.instructions h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.instructions ul {
+    text-align: left;
+    padding-left: 20px;
+    color: #555;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.ticket-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.ticket-actions button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-print {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: white;
+}
+
+.btn-new {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.ticket-actions button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Error and Success Messages */
+.error {
+    background: #fadbd8;
+    color: #e74c3c;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #e74c3c;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
+}
+
+.success {
+    background: #d5f5e3;
+    color: #27ae60;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #27ae60;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.1);
+}
+
+.field-error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    margin-top: auto;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Loading States */
+.loading {
+    color: #667eea;
+    font-style: italic;
+    display: inline-block;
+}
+
+.loading-dots {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+    }
+    
+    .parking-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .info-card div {
+        font-size: 2.5rem;
+    }
+    
+    .reservation-form {
+        padding: 25px;
+    }
+    
+    .reservation-form h2 {
+        font-size: 1.7rem;
+    }
+    
+    .ticket-display {
+        padding: 25px;
+    }
+    
+    .ticket-content img {
+        max-width: 200px;
+    }
+    
+    .ticket-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ticket-actions button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .info-card div {
+        font-size: 2rem;
+    }
+    
+    .reservation-form {
+        padding: 20px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    button[type="submit"] {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Focus States for Accessibility */
+button:focus, input:focus, select:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 126, 234, 0.8);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .reservation-form, .parking-info, header, footer {
+        display: none;
+    }
+    
+    .ticket-display {
+        box-shadow: none;
+        border: 1px solid #000;
+        padding: 20px;
+    }
+}
