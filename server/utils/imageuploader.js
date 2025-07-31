@@ -14,7 +14,7 @@ class ImageUploader {
             // Generate unique filename
             const ext = path.extname(file.originalname);
             const fileName = `${userId}-${Date.now()}${ext}`;
-            const uploadPath = path.join(__dirname, '../uploads/id_cards', fileName);
+            const uploadPath = path.join(process.env.UPLOADS_DIR || './uploads/id_cards', fileName);
 
             // Save the file
             await new Promise((resolve, reject) => {
