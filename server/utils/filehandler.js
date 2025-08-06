@@ -43,6 +43,39 @@ class FileHandler {
         });
     }
 
+      static async ensureUploadsDirectoryExists(subDir = 'id_cards') { // Default to id_cards subdirectory
+    try {
+        const baseUploadsDir = process.env.UPLOADS_DIR || path.join(__dirname, '..', 'uploads');
+        const fullUploadsDir = path.join(baseUploadsDir, subDir);
+        // Check if directory exists (using sync version for startup)
+        // --- FIX: Use fs.existsSync instead of fsSync.existsSync ---
+        if (!fs.existsSync(fullUploadsDir)) {
+            console.log(`Creating uploads directory: ${fullUploadsDir}`);
+            // Create directory recursively
+            // --- FIX: Use fs.mkdirSync for sync operation or await fs.promises.mkdir for async ---
+            // Using sync version here is fine for startup
+            fs.mkdirSync(fullUploadsDir, { recursive: true });
+            console.log(`Successfully created uploads directory: ${fullUploadsDir}`);
+        } else {
+            console.log(`Uploads directory already exists: ${fullUploadsDir}`);
+        }
+        // --- Optional: Ensure the base uploads dir also exists ---
+        // This might be redundant depending on your setup, but good to be sure.
+        if (baseUploadsDir !== fullUploadsDir) {
+             const parentDir = path.dirname(fullUploadsDir);
+             if (!fs.existsSync(parentDir)) {
+                 fs.mkdirSync(parentDir, { recursive: true });
+                 console.log(`Created parent uploads directory: ${parentDir}`);
+             }
+        }
+
+    } catch (error) {
+        console.error('Error ensuring uploads directory exists:', error);
+        // Depending on your needs, you might want to throw the error or just log it
+        // throw error; // Uncomment if you want the app to crash on failure
+    }
+}
+
     static writeFile(filename, data) {
         return new Promise((resolve, reject) => {
             const filePath = path.join(DATA_DIR, filename);

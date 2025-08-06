@@ -3,9 +3,9 @@
     {
       "space_id": "S001",
       "space_number": "P1",
-      "status": "Available",
+      "status": "Occupied",
       "vehicle_type": "Car",
-      "last_updated": "2025-07-30T19:21:58.197Z"
+      "last_updated": "2025-08-06T21:33:43.857Z"
     },
     {
       "space_id": "S002",
