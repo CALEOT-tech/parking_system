@@ -24,10 +24,7 @@ class ImageUploader {
             const uploadPath = path.join(baseUploadsDir, 'id_cards', fileName); // Ensure 'id_cards' matches your folder
 
             // Create the directory if it doesn't exist
-            await FileHandler.ensureUploadsDirectoryExists("id-cards");
-
-            // Save the file in the id-cards subdirectory
-           // const uploadPath = path.join(, fileName);
+            await FileHandler.ensureUploadsDirectoryExists("id_cards");
 
             // Save the file
             await new Promise((resolve, reject) => {

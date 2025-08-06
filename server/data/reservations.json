@@ -64,6 +64,19 @@
       "expiry_time": "2025-08-06T22:33:43.843Z",
       "status": "Reserved",
       "id_card_image": "/uploads/id_cards/12345678915-1754516023831.jpeg"
+    },
+    {
+      "reservation_id": "R1754517782326",
+      "ticket_id": "T17782313",
+      "driver_id": "12345678912",
+      "vehicle_plate": "3434R",
+      "vehicle_type": "Car",
+      "space_assigned": "P2",
+      "entry_time": "2025-08-06T22:03:02.326Z",
+      "exit_time": null,
+      "expiry_time": "2025-08-06T23:03:02.313Z",
+      "status": "Reserved",
+      "id_card_image": "/uploads/id_cards/12345678912-1754517782299.jpeg"
     }
   ]
 }
